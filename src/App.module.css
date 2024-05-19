@@ -1,0 +1,26 @@
+.wrapper{
+	max-width: 70rem;
+	margin: 2rem auto;
+	padding: 0 1rem;
+
+	display: grid;
+	grid-template-columns: 256px 1fr;
+	gap: 2rem;
+	align-items: flex-start;
+}
+
+@media (max-width: 768px){
+	html{
+		/*dentro do ambiente mobile, reduzir o font-size do html*/
+		font-size: 87.5%;
+		/*O rem por padrão tem font-size 16px. e o rem é baseado nesse tamanho. Como eu disse acima que a font-size vai ser 12, tudo o que utilizar rem vai se basear nos 12px - só que colocando pixel, o usuário não consegue aumentar ou diminuir a fonte (de acordo com o SO do celular dele). Então, pra se ajustar, é necessário colocar me %*
+		16px - 100%
+		14px - X
+		isso dá 87.5%
+		*/
+	}
+	/*quando a tela for menor que 768px, aplica o wrapper  abaixo, onde ele ocupa uma unica coluna inteira*/
+	.wrapper{
+		grid-template-columns: 1fr;
+	}
+}
